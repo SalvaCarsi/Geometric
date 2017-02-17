@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
 
 export default class App extends Component {
+
+  configureStore = () => {
+    return createStore(combineReducers((state = {}, action) => {
+      return state;
+    }));
+  };
+
   render = () => {
     return (
-      <div>
-      <h1>Ya!</h1>
-      <h1>Yup!</h1>
-      <h1>Yup!</h1>
-      </div>
+      <Provider store={this.configureStore()}>
+        <h1>Hi there!</h1>
+      </Provider>
     );
   }
 }
