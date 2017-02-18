@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
-import Header from './containers/Header';
-import ImersivoButton from './components/ImersivoButton';
+import ShapesHeader from './containers/ShapesHeader';
+import ShapesForm from './containers/ShapesForm';
 
 function shapeReducer(state = {currentShape: ''}, action) {
   switch (action.type) {
@@ -25,8 +25,8 @@ export default class App extends Component {
     return (
       <Provider store={this.configureStore()}>
         <div>
-          <Header />
-          <ImersivoButton>Button</ImersivoButton>
+          <ShapesHeader />
+          <ShapesForm />
         </div>
       </Provider>
     );

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import ImersivoWrapper from '../components/ImersivoWrapper';
 
-export class Header extends Component {
+export class ShapesHeader extends Component {
 
   render = () => {
     return (
@@ -21,4 +21,4 @@ export class Header extends Component {
 // Container
 const mapStateToProps = state => ({currentShape: state.currentShape});
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps)(ShapesHeader)
