@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
 import Header from './containers/Header';
-import ImersivoButton from './components/Button';
+import ImersivoButton from './components/ImersivoButton';
 
 function shapeReducer(state = {currentShape: ''}, action) {
   switch (action.type) {
