@@ -1,3 +1,5 @@
+'use strict';
+
 import styled from 'styled-components';
 
 const Button = styled.button`
