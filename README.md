@@ -9,6 +9,7 @@ I have used Dan Abramov react-hot-boilerplate. It is a very minimalistic boilerp
 
 TODO 
 - Implement test with Jest and Enzyme
+- Internationalization
 
 ### Usage
 
