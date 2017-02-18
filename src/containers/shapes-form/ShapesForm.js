@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import FormWrapper from '../../components/FormWrapper';
-import ButtonsWrapper from '../../components/ButtonsWrapper';
-import Button from '../../components/Button';
+import FormWrapper from '../../components/styled/FormWrapper';
+import ButtonsWrapper from '../../components/styled/ButtonsWrapper';
+import Button from '../../components/styled/Button';
 import SquareRenderer from '../../components/SquareRenderer';
 import DiamondRenderer from '../../components/DiamondRenderer';
 

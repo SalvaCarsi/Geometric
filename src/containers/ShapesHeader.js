@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import HeaderWrapper from '../components/HeaderWrapper';
+import HeaderWrapper from '../components/styled/HeaderWrapper';
 
 import shapeOptions from '../constants';
 

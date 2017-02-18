@@ -2,9 +2,9 @@
 
 import React, { Component } from 'react';
 
-import Circle from './Circle';
-import ButtonsWrapper from './ButtonsWrapper';
-import TableWrapper from './TableWrapper';
+import Circle from './styled/Circle';
+import ButtonsWrapper from './styled/ButtonsWrapper';
+import TableWrapper from './styled/TableWrapper';
 
 export class SquareRenderer extends Component {
 
