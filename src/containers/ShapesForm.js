@@ -3,17 +3,17 @@
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 
-import ImersivoWrapperForm from '../components/ImersivoWrapperForm';
-import ImersivoButton from '../components/ImersivoButton';
+import FormWrapper from '../components/FormWrapper';
+import Button from '../components/Button';
 
 export class ShapesForm extends Component {
 
   render = () => {
     return (
-      <ImersivoWrapperForm>
-        <ImersivoButton>Square</ImersivoButton>
-        <ImersivoButton>Diamond</ImersivoButton>
-      </ImersivoWrapperForm>
+      <FormWrapper>
+        <Button>Square</Button>
+        <Button>Diamond</Button>
+      </FormWrapper>
     );
   }
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ImersivoButton = styled.button`
+const Button = styled.button`
   display: inline-block;
   box-sizing: border-box;
   padding: 0.5em 2.5em;
@@ -23,4 +23,4 @@ const ImersivoButton = styled.button`
   }
 `;
 
-export default ImersivoButton;
+export default Button;
