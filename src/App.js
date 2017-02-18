@@ -3,27 +3,35 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
+import { composeWithDevTools } from 'remote-redux-devtools';
 
 import ShapesHeader from './containers/ShapesHeader';
-import ShapesForm from './containers/ShapesForm';
+import ShapesForm from './containers/shapes-form/ShapesForm';
+import shapeReducer from './containers/shapes-form/reducer';
 
-function shapeReducer(state = {currentShape: ''}, action) {
-  switch (action.type) {
-    case 'SQUARE': return state.merge({currentShape: 'Square'});
-    case 'DIAMOND': return state.merge({currentShape: 'diamond'});
-  }
-  return state;
+/**
+ * First configure the dev tools server
+ * Then combines the reducers
+ * @returns {Store<S>}
+ */
+function configureStore() {
+  const composeEnhancers = composeWithDevTools({
+    realtime: true,
+    port: 8000 ,
+    hostname: 'localhost'
+  });
+  const appReducers = combineReducers({shapeReducer});
+  return createStore(
+    appReducers,
+    composeEnhancers()
+  )
 }
 
 export default class App extends Component {
 
-  configureStore = () => {
-    return createStore(combineReducers({shapeReducer}));
-  };
-
   render = () => {
     return (
-      <Provider store={this.configureStore()}>
+      <Provider store={configureStore()}>
         <div>
           <ShapesHeader />
           <ShapesForm />

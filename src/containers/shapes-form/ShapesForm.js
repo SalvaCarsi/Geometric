@@ -1,13 +1,16 @@
 'use strict';
 
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import FormWrapper from '../components/FormWrapper';
-import ButtonsWrapper from '../components/ButtonsWrapper';
-import Button from '../components/Button';
-import SquareRenderer from '../components/SquareRenderer';
-import DiamondRenderer from '../components/DiamondRenderer';
+import FormWrapper from '../../components/FormWrapper';
+import ButtonsWrapper from '../../components/ButtonsWrapper';
+import Button from '../../components/Button';
+import SquareRenderer from '../../components/SquareRenderer';
+import DiamondRenderer from '../../components/DiamondRenderer';
+
+import * as actionsCreator from './actions';
 
 const shapeOptions = {
   none: 'none',
@@ -19,19 +22,18 @@ export class ShapesForm extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {activeButton: shapeOptions.none};
   }
 
   onClickSquareButton = () => {
-    this.setState({activeButton: shapeOptions.square});
+    this.props.actions.updateShape(shapeOptions.square);
   };
 
   onClickDiamondButton = () => {
-    this.setState({activeButton: shapeOptions.diamond});
+    this.props.actions.updateShape(shapeOptions.diamond);
   };
 
   renderShape = () => {
-    switch(this.state.activeButton){
+    switch(this.props.currentShape){
       case shapeOptions.square:
         return <SquareRenderer/>;
       case shapeOptions.diamond:
@@ -56,8 +58,6 @@ export class ShapesForm extends Component {
 }
 
 // Container
-// const mapStateToProps = state => ({currentShape: state.currentShape});
-
-// export default connect(mapStateToProps)(Header)
-
-export default ShapesForm;
+const mapStateToProps = state => ({currentShape: state.shapeReducer.currentShape});
+const mapDispatchToProps = dispatch => ({actions: bindActionCreators(actionsCreator, dispatch)});
+export default connect(mapStateToProps, mapDispatchToProps)(ShapesForm);
