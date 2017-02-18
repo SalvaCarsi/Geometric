@@ -10,7 +10,7 @@ import ShapesForm from './containers/shapes-form/ShapesForm';
 import shapeReducer from './containers/shapes-form/reducer';
 
 /**
- * First configure the dev tools server
+ * First configure the connection with the dev tools server
  * Then combines the reducers
  * @returns {Store<S>}
  */

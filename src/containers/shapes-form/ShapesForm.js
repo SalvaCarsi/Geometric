@@ -10,13 +10,9 @@ import Button from '../../components/Button';
 import SquareRenderer from '../../components/SquareRenderer';
 import DiamondRenderer from '../../components/DiamondRenderer';
 
-import * as actionsCreator from './actions';
+import shapeOptions from '../../constants';
 
-const shapeOptions = {
-  none: 'none',
-  square:'square',
-  diamond: 'diamond'
-};
+import * as actionsCreator from './actions';
 
 export class ShapesForm extends Component {
 

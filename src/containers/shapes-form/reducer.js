@@ -1,9 +1,11 @@
 'use strict';
 
+import shapeOptions from '../../constants';
+
 function shapeReducer(state = {currentShape: ''}, action) {
   switch (action.type) {
-    case 'square': return {currentShape: 'square'};
-    case 'diamond': return {currentShape: 'diamond'};
+    case shapeOptions.square: return action.payload;
+    case shapeOptions.diamond: return action.payload;
     default: return state
   }
 }
