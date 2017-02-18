@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 
 import FormWrapper from '../components/FormWrapper';
+import ButtonsWrapper from '../components/ButtonsWrapper';
 import Button from '../components/Button';
 
 export class ShapesForm extends Component {
@@ -11,8 +12,10 @@ export class ShapesForm extends Component {
   render = () => {
     return (
       <FormWrapper>
-        <Button>Square</Button>
-        <Button>Diamond</Button>
+        <ButtonsWrapper>
+          <Button>Square</Button>
+          <Button>Diamond</Button>
+        </ButtonsWrapper>
       </FormWrapper>
     );
   }
