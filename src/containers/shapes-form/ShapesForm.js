@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 
 import FormWrapper from '../../components/styled/FormWrapper';
 import ButtonsWrapper from '../../components/styled/ButtonsWrapper';
-import Button from '../../components/styled/Button';
+import {Button, ActiveButton} from '../../components/styled/Button';
 import SquareRenderer from '../../components/SquareRenderer';
 import DiamondRenderer from '../../components/DiamondRenderer';
 
@@ -39,13 +39,27 @@ export class ShapesForm extends Component {
     }
   };
 
+  /**
+   * Helper methods to keep the button active based on the state. See renderButtons
+   */
+  squareIsActive = () => <ActiveButton onClick={this.onClickSquareButton}>Square</ActiveButton>;
+  squareIsNotActive = () => <Button onClick={this.onClickSquareButton}>Square</Button>;
+  diamondIsActive = () => <ActiveButton onClick={this.onClickDiamondButton()}>Diamond</ActiveButton>;
+  diamondIsNotActive = () => <Button onClick={this.onClickDiamondButton}>Diamond</Button>;
+
+  renderButtons = () => {
+    return (
+      <ButtonsWrapper>
+        { this.props.currentShape === shapeOptions.square ? this.squareIsActive() : this.squareIsNotActive() }
+        { this.props.currentShape === shapeOptions.diamond ? this.diamondIsActive() : this.diamondIsNotActive() }
+      </ButtonsWrapper>
+    );
+  };
+
   render = () => {
     return (
       <FormWrapper>
-        <ButtonsWrapper>
-          <Button onClick={this.onClickSquareButton}>Square</Button>
-          <Button onClick={this.onClickDiamondButton}>Diamond</Button>
-        </ButtonsWrapper>
+        {this.renderButtons()}
         {this.renderShape()}
       </FormWrapper>
     );

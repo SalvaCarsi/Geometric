@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-const Button = styled.button`
+const commonStyles = `
   display: inline-block;
   box-sizing: border-box;
   margin: auto 0.2em;
@@ -15,12 +15,29 @@ const Button = styled.button`
   font-size: 16px;
   border: 2px solid #000;
   color: #000;
+`;
+
+const alternativeBackground = `
+  background: #FFCC66; 
+  color: #000;
+`;
+
+const Button = styled.button`
+  ${commonStyles}
   background: #FFEEBB;
   
   &:active {
-    background: #FFCC66;
-    color: #000;
+    ${alternativeBackground}
+  }
+  
+  &:hover { 
+    ${alternativeBackground}
   }
 `;
 
-export default Button;
+const ActiveButton = styled.button`
+  ${commonStyles}
+  background: #FFCC66;
+`;
+
+export { Button, ActiveButton };
