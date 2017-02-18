@@ -7,6 +7,9 @@ I have used Dan Abramov react-hot-boilerplate. It is a very minimalistic boilerp
 - Redux: https://github.com/reactjs/redux
 - styled-components: https://github.com/styled-components/styled-components
 
+TODO 
+- Implement test with Jest and Enzyme
+
 ### Usage
 
 ```
