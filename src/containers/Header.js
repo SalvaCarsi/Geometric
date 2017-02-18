@@ -3,17 +3,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Wrapper from '../../components/ImersivoWrapper';
+import ImersivoWrapper from '../components/ImersivoWrapper';
 
 export class Header extends Component {
 
   render = () => {
     return (
-      <Wrapper>
+      <ImersivoWrapper>
         <h1>Geometric shapes</h1>
         <h3>Current shapes {this.props.currentShape}</h3>
-      </Wrapper>
-
+      </ImersivoWrapper>
     );
   }
 
