@@ -9,16 +9,12 @@ import TableWrapper from './styled/TableWrapper';
 export class SquareRenderer extends Component {
 
   /**
-   * We need an bi-dimensional array with different values because react render function needs the key property of
-   * some elements to be unique
+   * Helper method to clarify the code in renderCircles
    * @param size
+   * @returns {*}
    */
-  generateBiDimensionalArray = (size = 5) => {
-    return Array.apply(null, new Array(size)).map(
-      (value, index) => {
-        return Array.apply(null, new Array(size)).map( (value, index) => index);
-      }
-    );
+  generateArray = (size = 5) => {
+    return Array.apply(null, new Array(size))
   };
 
   /**
@@ -34,17 +30,17 @@ export class SquareRenderer extends Component {
     return (
       <TableWrapper>
         <tbody>
-          {
-            this.generateBiDimensionalArray().map( (row, index) => {
-              return (
-                <tr key={index}>
-                  {row.map( cell => {
-                    return (<td key={cell}><Circle/></td>)
-                  })}
-                </tr>
-              )
-            })
-          }
+        {
+          this.generateArray().map( (row, indexRow) => {
+            return (
+              <tr key={indexRow}>
+                {this.generateArray().map( (cell, indexCell) => {
+                  return (<td key={indexCell}><Circle/></td>)
+                })}
+              </tr>
+            )
+          })
+        }
         </tbody>
       </TableWrapper>
     );
