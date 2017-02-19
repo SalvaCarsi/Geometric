@@ -6,14 +6,22 @@ const commonStyles = `
   display: inline-block;
   box-sizing: border-box;
   margin: auto 0.2em;
-  width: 250px;
-  height: 50px;
   border-radius: 4px;
   cursor: pointer;
   outline: 0;
-  font-size: 25px;
   border: 2px solid #000;
   color: #000;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+    width: 100px;
+    height: 30px;
+  }
+  @media (min-width: 769px) {
+    font-size: 25px;
+    width: 250px;
+    height: 50px;  
+  }
 `;
 
 const alternativeBackground = `
