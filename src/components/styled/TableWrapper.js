@@ -3,9 +3,7 @@
 import styled from 'styled-components';
 
 const TableWrapper = styled.table`
-    margin-top: 1.5em;
-    margin-left:auto; 
-    margin-right:auto;
+  margin: 1.5em auto auto auto;  
 `;
 
 export default TableWrapper;
