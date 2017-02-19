@@ -8,7 +8,7 @@ const FormWrapper = styled.div`
   padding: 0.1em 0.1em;
   margin: auto 2em auto 2em;
   background: #E8E8E8;
-  height: 450px;
+  height: 530px;
 `;
 
 export default FormWrapper;
