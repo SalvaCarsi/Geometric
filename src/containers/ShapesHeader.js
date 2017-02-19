@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import HeaderWrapper from '../components/styled/HeaderWrapper';
+import TextWrapper from '../components/styled/TextWrapper';
 
 import shapeOptions from '../constants';
 
@@ -20,8 +21,18 @@ export class ShapesHeader extends Component {
   render = () => {
     return (
       <HeaderWrapper>
-        <h1>Geometric shapes</h1>
-        <h3>{this.renderCurrentShapeLabel()}</h3>
+        <TextWrapper
+          size={1.7}
+          fontWeight={'bold'}
+          padding={'0.1em 0.1em'}>
+            Geometric shapes
+        </TextWrapper>
+        <TextWrapper
+          size={1}
+          fontWeight={'normal'}
+          padding={'0.0em 0.1em 1.2em 0.1em'}>
+          {this.renderCurrentShapeLabel()}
+        </TextWrapper>
       </HeaderWrapper>
     );
   }

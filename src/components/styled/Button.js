@@ -11,7 +11,6 @@ const commonStyles = `
   border-radius: 4px;
   cursor: pointer;
   outline: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   border: 2px solid #000;
   color: #000;

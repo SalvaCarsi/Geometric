@@ -8,6 +8,7 @@ import { composeWithDevTools } from 'remote-redux-devtools';
 import ShapesHeader from './containers/ShapesHeader';
 import ShapesForm from './containers/shapes-form/ShapesForm';
 import shapeReducer from './containers/shapes-form/reducer';
+import BodyWrapper from './components/styled/BodyWrapper';
 
 /**
  * First configure the connection with the dev tools server
@@ -32,10 +33,10 @@ export default class App extends Component {
   render = () => {
     return (
       <Provider store={configureStore()}>
-        <div>
+        <BodyWrapper>
           <ShapesHeader />
           <ShapesForm />
-        </div>
+        </BodyWrapper>
       </Provider>
     );
   }
