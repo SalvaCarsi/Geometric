@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import FormWrapper from '../../components/styled/FormWrapper';
-import ButtonsWrapper from '../../components/styled/ButtonsWrapper';
+import MarginWrapper from '../../components/styled/MarginWrapper';
 import {Button, ActiveButton} from '../../components/styled/Button';
 import SquareRenderer from '../../components/SquareRenderer';
 import DiamondRenderer from '../../components/DiamondRenderer';
@@ -49,10 +49,10 @@ export class ShapesForm extends Component {
 
   renderButtons = () => {
     return (
-      <ButtonsWrapper>
+      <MarginWrapper>
         { this.props.currentShape === shapeOptions.square ? this.squareIsActive() : this.squareIsNotActive() }
         { this.props.currentShape === shapeOptions.diamond ? this.diamondIsActive() : this.diamondIsNotActive() }
-      </ButtonsWrapper>
+      </MarginWrapper>
     );
   };
 

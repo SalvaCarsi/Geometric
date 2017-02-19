@@ -2,8 +2,8 @@
 
 import styled from 'styled-components';
 
-const ButtonsWrapper = styled.div`
+const MarginWrapper = styled.div`
   margin: 0.5em;
 `;
 
-export default ButtonsWrapper;
+export default MarginWrapper;

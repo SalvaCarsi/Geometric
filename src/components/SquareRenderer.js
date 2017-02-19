@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 
 import Circle from './styled/Circle';
-import ButtonsWrapper from './styled/ButtonsWrapper';
+import MarginWrapper from './styled/MarginWrapper';
 import TableWrapper from './styled/TableWrapper';
 
 import generateArray from '../helpers';
@@ -39,7 +39,7 @@ export class SquareRenderer extends Component {
 
   render = () => {
     return (
-      <ButtonsWrapper>{this.renderCircles()}</ButtonsWrapper>
+      <MarginWrapper>{this.renderCircles()}</MarginWrapper>
     );
   }
 
