@@ -5,7 +5,6 @@ import _ from 'lodash';
 /**
  * Generates a new array of the specified size. Used for rendering the shapes.
  * @param size
- * @param element
  * @returns {*}
  */
 export default function generateArray(size = 5) {

@@ -42,7 +42,7 @@ export class DiamondRenderer extends Component {
   renderDiamond = () => {
     // Here I set the value for the diamondWidth, this should be the value used all around the component instead of
     // accessing it through the props. It makes the code more explicit and clear.
-    const diamondWidth = _.isNil(this.props.diamondWidth) ? 5 : this.props.diamondWidth;
+    const diamondWidth = _.isNil(this.props.shapeSize) ? 5 : this.props.shapeSize;
     const diamondHeight = (diamondWidth*2)-1;
     return (
       <TableWrapper>
@@ -72,7 +72,7 @@ export class DiamondRenderer extends Component {
 }
 
 DiamondRenderer.propTypes = {
-  diamondWidth: React.PropTypes.string
+  shapeSize: React.PropTypes.string
 };
 
 export default  DiamondRenderer;
