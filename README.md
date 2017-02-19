@@ -1,4 +1,4 @@
-### Imersivo app
+### Geometric app
 
 I have used Dan Abramov react-hot-boilerplate. It is a very minimalistic boilerplate that sets up babel, express, react, slint and hot reloading (I have disable the last feature as it has some issues when developing with Webstorm Idea IDE as it's my case). 
 
