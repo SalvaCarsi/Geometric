@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import Circle from './styled/Circle';
+import CircleSmall from './styled/CircleSmall';
 import MarginWrapper from './styled/MarginWrapper';
 import TableWrapper from './styled/TableWrapper';
 
@@ -21,7 +21,7 @@ export class DiamondRenderer extends Component {
                 <td key={index}>
                   {
                     generateArray().map( (v, i) => {
-                      return <Circle/>;
+                      return <CircleSmall/>;
                     })
                   }
                 </td>
