@@ -12,8 +12,6 @@ I have chosen this boilerplate to start almost from scratch and add later on the
 - remotedev-server: https://github.com/zalmoxisus/remotedev-server
 
 TODO 
-- Prop validation and prop constructor for the containers and components
-- Choose a font similar to the one given in the example
 - Implement test with Jest and Enzyme
 - Internationalization
 
