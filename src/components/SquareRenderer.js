@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import CircleMedium from './styled/CircleMedium';
+import {MediumCircle} from './styled/Circle';
 import MarginWrapper from './styled/MarginWrapper';
 import TableWrapper from './styled/TableWrapper';
 
@@ -29,7 +29,7 @@ export class SquareRenderer extends Component {
             return (
               <tr key={indexRow}>
                 {generateArray(size).map( (cell, indexCell) => {
-                  return (<td key={indexCell}><CircleMedium delay={indexCell+1}/></td>)
+                  return (<td key={indexCell}><MediumCircle delay={indexCell+1}/></td>)
                 })}
               </tr>
             )

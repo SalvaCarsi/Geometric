@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import CircleSmall from './styled/CircleSmall';
+import {SmallCircle} from './styled/Circle';
 import MarginWrapper from './styled/MarginWrapper';
 import TableWrapper from './styled/TableWrapper';
 
@@ -21,7 +21,7 @@ export class DiamondRenderer extends Component {
    * @param value
    * @param index
    */
-  toCircleSmallWithKey = (value, index) => <CircleSmall key={index} delay={index+1}/>;
+  toCircleSmallWithKey = (value, index) => <SmallCircle key={index} delay={index+1}/>;
 
   /**
    * Creates as many circles as needed increasingly until it reaches the middle of the diamond, then it prints
