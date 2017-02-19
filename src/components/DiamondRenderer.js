@@ -21,7 +21,7 @@ export class DiamondRenderer extends Component {
    * @param value
    * @param index
    */
-  toCircleSmallWithKey = (value, index) => <CircleSmall key={index}/>;
+  toCircleSmallWithKey = (value, index) => <CircleSmall key={index} delay={index+1}/>;
 
   /**
    * Creates as many circles as needed increasingly until it reaches the middle of the diamond, then it prints
