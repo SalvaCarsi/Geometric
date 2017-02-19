@@ -22,7 +22,7 @@ export class ShapesHeader extends Component {
     return (
       <HeaderWrapper>
         <TextWrapper
-          size={1.7}
+          size={1.8}
           fontWeight={'bold'}
           padding={'0.1em 0.1em'}>
             Geometric shapes
