@@ -9,7 +9,7 @@ const HeaderWrapper = styled.div`
   padding: 0.1em 0.1em;
   text-align: center;
   margin: auto 2em;
-  background: #7E3517;
+  background: #B10E0E;
 `;
 
 export default HeaderWrapper;

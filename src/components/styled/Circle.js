@@ -8,7 +8,7 @@ const commonStyles = `
   margin: 0.15em;
   border: 1px solid #000;
   border-radius: 50%;
-  background-color: #7E3517;
+  background-color: #E52424;
 `;
 
 
