@@ -12,18 +12,18 @@ const commonStyles = `
 
 
 const MediumCircle = styled.div`
-	margin: 0.15em;
-	width: 2.5em;
-	height: 2.5em; 
+	margin: 0.4em;
+	width: 3.9em;
+	height: 3.9em; 
 	${commonStyles}
 	animation: ${(props) => props.delay}s ${fadeIn} ease-out;
 `;
 
 const SmallCircle = styled.div`
-	margin-left: 0.2em;
-	margin-right: 0.2em;
-	width: 1.7em;
-	height: 1.7em; 
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+	width: 2.2em;
+	height: 2.2em; 
   display: inline-block;
   ${commonStyles}
   animation: ${(props) => props.delay}s ${fadeIn} ease-out;
