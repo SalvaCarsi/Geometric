@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import _ from 'lodash';
 
 import CircleSmall from './styled/CircleSmall';
 import MarginWrapper from './styled/MarginWrapper';
@@ -9,6 +10,10 @@ import TableWrapper from './styled/TableWrapper';
 import generateArray from '../helpers';
 
 export class DiamondRenderer extends Component {
+
+  constructor(props) {
+    super(props);
+  }
 
   /**
    * Helper function to transform an array into another array whose components are of type CircleSmall.
@@ -32,10 +37,12 @@ export class DiamondRenderer extends Component {
 
   /**
    * Helper method to deal with the table, rows and columns creation.
-   * @param diamondWidth
    * @returns {XML}
    */
-  renderDiamond = (diamondWidth = 5) => {
+  renderDiamond = () => {
+    // Here I set the value for the diamondWidth, this should be the value used all around the component instead of
+    // accessing it through the props. It makes the code more explicit and clear.
+    const diamondWidth = _.isNil(this.props.diamondWidth) ? 5 : this.props.diamondWidth;
     const diamondHeight = (diamondWidth*2)-1;
     return (
       <TableWrapper>
@@ -63,5 +70,9 @@ export class DiamondRenderer extends Component {
   }
 
 }
+
+DiamondRenderer.propTypes = {
+  diamondWidth: React.PropTypes.string
+};
 
 export default  DiamondRenderer;
