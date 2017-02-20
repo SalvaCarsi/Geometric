@@ -20,7 +20,7 @@ TODO
 For running the application:
 
 ```
-https://github.com/SalvaCarsi/Geometric/
+git clone https://github.com/SalvaCarsi/Geometric/
 cd Geometric/
 npm install
 npm start
